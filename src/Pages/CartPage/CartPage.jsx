@@ -4,11 +4,11 @@ import "./CartPage.css";
 import UP from "../../images/uparrow.png";
 import DOWN from "../../images/downarrow.png";
 import Cart from '../../images/add-cart.png'
-import { useState } from "react";
+
 
 const CartPage = () => {
   const data = useSelector((state) => state.CartReducer.cart);
-  const [count, setCount] = useState(1);
+  
 
   return (
     <div className="cart">
@@ -32,7 +32,7 @@ const CartPage = () => {
                   <button className="btn">
                     <img className="ico" src={UP} />
                   </button>
-                  <div>{count}</div>
+                  <div></div>
                   <button className="btn">
                     <img className="ico" src={DOWN} />
                   </button>

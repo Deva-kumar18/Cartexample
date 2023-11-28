@@ -11,27 +11,32 @@ const initialState = {
         name:"MacBook Pro",
         image:MACBOOK,
         Price:'1000$',
+        count:1,
     },
     {
         id:2,
         name:"Iphone 15pro",
         image:IPHONE,
         Price:'500$',
+        count:1,
     },{
         id:3,
         name:"Headset",
         image:HEADSET,
         Price:'100$',
+        count:1,
     },{
         id:4,
         name:"Projector",
         image:PROJECTOR,
         Price:'300$',
+        count:1,
     },{
         id:5,
         name:"Ps5",
         image:PS5,
         Price:'200$',
+        count:1,
     }]
 } 
 

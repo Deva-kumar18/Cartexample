@@ -24,10 +24,9 @@ li {
 }
 .cart-box {
   height: 25vh;
-  width: 80vw;
-
+  width: 100vw;
   border-radius: 10px;
-  margin: 2vh;
+ 
 }
 
 .content {
@@ -46,6 +45,8 @@ li {
   position: absolute;
   top: 0;
   background-color: purple;
+  display: flex;
+  
 }
 .flex-data {
   display: flex;
@@ -81,7 +82,7 @@ li {
 }
 .total-part {
   padding: 1rem;
-  width: 45vw;
+  width: 75vw;
   background-color: blue;
   font-size: 18px;
   display: flex;
@@ -93,6 +94,7 @@ li {
   height: 3rem;
   width: 3rem;
   position: absolute;
-  top: 0;
+  top: 2vh;
   right: 0;
+  
 }
