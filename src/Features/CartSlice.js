@@ -10,35 +10,42 @@ const initialState = {
         id:1,
         name:"MacBook Pro",
         image:MACBOOK,
-        Price:'1000$',
+        Price:1000,
         count:1,
+        totalAmount:1000,
     },
     {
         id:2,
         name:"Iphone 15pro",
         image:IPHONE,
-        Price:'500$',
+        Price:500,
         count:1,
+        totalAmount:500,
     },{
         id:3,
         name:"Headset",
         image:HEADSET,
-        Price:'100$',
+        Price:100,
         count:1,
+        totalAmount:100,
     },{
         id:4,
         name:"Projector",
         image:PROJECTOR,
-        Price:'300$',
+        Price:300,
         count:1,
+        totalAmount:300,
     },{
         id:5,
         name:"Ps5",
         image:PS5,
-        Price:'200$',
+        Price:200,
         count:1,
+        totalAmount:200,
     }]
 } 
+
+
 
 const cartSlice =  createSlice({
     name:'cartActions',
@@ -48,7 +55,14 @@ const cartSlice =  createSlice({
             const {count,key,opr} = action.payload
             
             console.log(count,key,opr)
-             state.cart[key].count=count
+            if(opr==="add"){
+                state.cart[key].totalAmount=count*state.cart[key].Price
+                state.cart[key].count=count;
+            }else{
+                state.cart[key].totalAmount=count*state.cart[key].Price
+                state.cart[key].count=count;
+            }
+             
              
           },
           

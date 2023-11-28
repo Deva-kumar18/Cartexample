@@ -12,6 +12,15 @@ const CartPage = () => {
   const dispatch = useDispatch()
   const [amount, setAmount]= useState(0)
    var totalcount;
+
+   const calulatAmount=()=>{
+    var totalAmount=0;
+    data.map((val,key)=>(
+    totalAmount=totalAmount+val.totalAmount
+    ))
+    return totalAmount
+   }
+   
   
 
   return (
@@ -33,17 +42,18 @@ const CartPage = () => {
                   </li>
                 </div>
                 <div className="add">
-                  <button className="btn" onClick={()=>dispatch(cart({count:val.count+1,key,opr:"cartcount"}))}>
+                  <button className="btn" onClick={()=>dispatch(cart({count:val.count+1,key,opr:"add"}))}>
                     <img className="ico" src={UP} />
                   </button>
                   <div>{val.count}</div>
-                  <button className="btn" onClick={()=>dispatch(cart({count:val.count-1,key,opr:"cartcount"}))}>
+                  <button className="btn" onClick={()=>dispatch(cart({count:val.count-1,key,opr:"sub"}))}>
                     <img className="ico" src={DOWN} />
                   </button>
                 </div>
               </div>
             </ul>
-           
+            
+            
           </div>
            
         ))}
@@ -51,11 +61,10 @@ const CartPage = () => {
         <div className="total-part">
             
           <div>TotalCost</div>
-          <div>10000</div>
+          {calulatAmount()}
         </div>
       </div>
 
-      <div></div>
     </div>
   );
 };
