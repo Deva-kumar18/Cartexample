@@ -4,7 +4,7 @@ li {
   font-size: 1.05rem;
 }
 .img {
-  height: 7rem;
+  height: 6rem;
   width: 6rem;
 }
 .cart {
@@ -24,7 +24,7 @@ li {
 }
 .cart-box {
   height: 25vh;
-  width: 60vw;
+  width: 80vw;
 
   border-radius: 10px;
   margin: 2vh;
@@ -90,7 +90,9 @@ li {
   background-color: rgba(128, 128, 128, 0.096);
 }
 .cart-ico {
-  height: 4rem;
-  width: 4rem;
-  margin-left: 95vw;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
