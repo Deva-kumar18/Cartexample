@@ -45,7 +45,11 @@ const cartSlice =  createSlice({
     initialState,
     reducers:{
           cart(state,action){
+            const {count,key,opr} = action.payload
             
+            console.log(count,key,opr)
+             state.cart[key].count=count
+             
           },
           
     }

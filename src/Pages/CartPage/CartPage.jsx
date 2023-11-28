@@ -1,13 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { cart } from "../../Features/CartSlice";
 import "./CartPage.css";
 import UP from "../../images/uparrow.png";
 import DOWN from "../../images/downarrow.png";
 import Cart from '../../images/add-cart.png'
+import { useState } from "react";
 
 
 const CartPage = () => {
   const data = useSelector((state) => state.CartReducer.cart);
+  const dispatch = useDispatch()
+  const [amount, setAmount]= useState(0)
+   var totalcount;
   
 
   return (
@@ -29,11 +33,11 @@ const CartPage = () => {
                   </li>
                 </div>
                 <div className="add">
-                  <button className="btn">
+                  <button className="btn" onClick={()=>dispatch(cart({count:val.count+1,key,opr:"cartcount"}))}>
                     <img className="ico" src={UP} />
                   </button>
-                  <div></div>
-                  <button className="btn">
+                  <div>{val.count}</div>
+                  <button className="btn" onClick={()=>dispatch(cart({count:val.count-1,key,opr:"cartcount"}))}>
                     <img className="ico" src={DOWN} />
                   </button>
                 </div>
