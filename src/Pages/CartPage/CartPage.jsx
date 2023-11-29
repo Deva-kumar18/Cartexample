@@ -10,8 +10,6 @@ const CartPage = () => {
   const data = useSelector((state) => state.CartReducer.cart);
 
   const dispatch = useDispatch();
-  const [amount, setAmount] = useState(0);
-  var totalcount;
 
   const calculatAmount = () => {
     var totalAmount = 0;
