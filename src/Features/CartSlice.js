@@ -61,14 +61,15 @@ const cartSlice = createSlice({
       if (opr === "add") {
         state.cart[key].totalAmount = count * state.cart[key].Price;
         state.cart[key].count = count;
-        if(state.cart[key].count==0){
-            state.cart.splice(key,1)
-        }
         
-      } else {
+        
+      } else{
         state.cart[key].totalAmount = count * state.cart[key].Price;
         state.cart[key].count = count;
       }
+      if ( state.cart[key].count === 0) {
+        state.cart.splice(key, 1);
+    }
       
     },
     removeCart(state,action){
